@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Design Tokens SIAKAD STIKOM 2026 */
+@theme {
+  --color-stikom-navy: #1e3a8a;
+  --color-stikom-blue: #2563eb;
+  --color-stikom-slate: #1e293b;
+  --color-stikom-light: #f1f5f9;
+  --color-stikom-white: #ffffff;
+
+  --font-heading: "Inter", Arial, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Pengaturan dasar website */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  color: #1e293b;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Fokus untuk aksesibilitas */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #1e3a8a;
 }
